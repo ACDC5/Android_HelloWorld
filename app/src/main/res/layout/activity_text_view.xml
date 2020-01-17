@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- 文字大小、颜色，文本内容可以引用也可直接写-->
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_test1"
+        android:textColor="#000000"
+        android:textSize="24sp"/>
+
+    <!-- 当文字显示不下时使用忽略号；设置上边界 -->
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_test1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="千山鸟飞尽,万径人踪灭，孤舟蓑笠翁"
+        android:textSize="25sp"
+        android:textColor="#F79709"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_test"
+        android:textColor="#000000"
+        android:drawableRight="@drawable/baseline_thumb_down_black_48"
+        android:textSize="24sp"
+        android:drawablePadding="20dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="oh my god"
+        android:textSize="24sp"
+        android:textColor="#079709"
+        android:layout_marginTop="8dp"
+        />
+</LinearLayout>

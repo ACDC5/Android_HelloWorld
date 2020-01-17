@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 默认在左上角-->
+    <View
+    android:id="@+id/rel"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:background="#000000" />
+
+    <!-- 设置_below属性，使当前元素在上一元素的下面 -->
+    <View
+        android:id="@+id/rel_2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#66ccff "
+        android:layout_below="@+id/rel"/>
+
+    <LinearLayout
+        android:id="@+id/rel_3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rel_2"
+        android:padding="15dp"
+        android:background="#0066ff">
+        <View
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="#ff0033"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:padding="15dp">
+            <View
+                android:id="@+id/view_3"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#FF9900"/>
+            <View
+                android:id="@+id/view_4"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#FF9900"
+                android:layout_toRightOf="@+id/view_3"
+                android:layout_marginLeft="10dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

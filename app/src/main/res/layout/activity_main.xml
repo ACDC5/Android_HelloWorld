@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 使用线性布局.顶级布局默认组件水平排列，现设置为垂直排列-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我是按钮控件"/>
+    <!--文本控件 -->
+<!--    <TextView-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#ffffff"-->
+<!--        android:text="cookies!"-->
+<!--        android:textColor="#000000"-->
+<!--        android:textSize="43sp"-->
+<!--        android:textStyle="bold" />-->
+
+    <!-- 设置为水平排列，和上下左右各设置对View的内边距-->
+    <LinearLayout
+        android:id="@+id/ksjy"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="#00bfff"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="#800000" />
+        <View
+            android:id="@+id/v2"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:padding="20dp"
+            android:background="#ff3300"/>
+    </LinearLayout>
+
+    <!-- 设置为水平排列，宽度自动适
+    应父元素(即整个页面)。因为顶级布局设规定排列按垂直排列，
+     所以并没有出现在第一行布局中,
+     同时设置了顶部边距20个dp(距第一元素)。
+     将两个View的宽度设置为0，再分别将权重设置为1，
+     这样一来总权重就是2，即权重平分后该线性
+     布局即会被平均分配(weight属性，按照剩余内容进行权重分配)-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:background="#ff5050"
+        android:layout_marginTop="20dp">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#9999ff"
+            android:layout_weight="1"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#ff8000"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:background="#ff5050"
+        android:layout_marginTop="20dp">
+
+        <!-- 已知父元素宽度为410，实现使父元素平分 -->
+        <View
+            android:layout_width="205dp"
+            android:layout_height="match_parent"
+            android:background="#33cc33" />
+        <View
+            android:layout_width="205dp"
+            android:layout_height="match_parent"
+            android:background="#0d0d0d" />
+
+    </LinearLayout>
+
+</LinearLayout>
