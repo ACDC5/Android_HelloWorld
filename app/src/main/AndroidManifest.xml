@@ -22,6 +22,8 @@
         <activity android:name=".RelativeLayout_1"></activity>
 
         <activity android:name=".textViewActivity"></activity>
+
+        <activity android:name=".ButtonActivity"></activity>
     </application>
 
 </manifest>

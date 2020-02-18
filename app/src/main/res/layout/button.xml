@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <!--textView的一些属性同样适用于Button；普通按钮 -->
+    <Button
+        android:id="@+id/butt_4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="按钮4"
+        android:textSize="20sp"
+        android:textColor="#0066FF"
+        android:background="#000000"/>
+
+    <!-- 自定义按钮形状，使用background属性-->
+    <Button
+        android:id="@+id/butt_5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/butt_4"
+        android:text="按钮5"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#0066FF"
+        android:background="@drawable/bg_btn2"/>
+
+    <!-- 自定义按钮，带圆角的描边-->
+    <Button
+        android:id="@+id/butt_6"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="按钮6"
+        android:textColor="#999999"
+        android:background="@drawable/bg_btn3"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:layout_below="@id/butt_5"/>
+
+    <!-- 按钮点击效果 -->
+    <Button
+        android:id="@+id/butt_7"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/butt_6"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:background="@drawable/bg_btn4"
+        android:text="按钮7"/>
+
+    <!--按钮点击事件 -->
+    <Button
+        android:id="@+id/butt_8"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:text="按钮8"
+        android:textSize="20sp"
+        android:textColor="#1AE694"
+        android:background="#FFFFFF"
+        android:onClick="showToast"
+        android:layout_below="@id/butt_7"/>
+
+    <!--文本控件绑定点击事件 -->
+    <TextView
+        android:id="@+id/text_1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="我是文本2020年2月16"
+        android:textSize="20sp"
+        android:textColor="#00CCFF"
+        android:background="#000000"
+        android:gravity="center"
+        android:layout_below="@id/butt_8"
+        android:layout_marginTop="50dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按钮按压时的效果 -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#CC7A90"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+
+    <!--按钮未按时的效果 -->
+    <item android:state_pressed="false">
+        <shape>
+            <solid android:color="#FF9900" />
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+</selector>

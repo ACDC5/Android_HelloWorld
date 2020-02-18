@@ -19,16 +19,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //加载主页面
         setContentView(R.layout.activity_main); //每个Activity类里面所以的代码都是基于(setContentView方法设置的布局)这个页面进行操作的，当调用别的页面的id时，对应的动作会出现空指针
         view = findViewById(R.id.ksjy);    //初始化控件,如果控件是按钮，则绑定的id不能是布局控件，否则应用无法启动
         view.setOnClickListener(this);    //给控件添加监听事件。绑定控件的id后，当被组件点击触发时，执行重写的接口方法onClick
 
+        //按钮事件
         button = findViewById(R.id.btn_2); //点击此按钮后跳转到指定的页面
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //跳转到textView演示页面
-                Intent intent = new Intent(MainActivity.this,textViewActivity.class);
+                Intent intent = new Intent(MainActivity.this,textViewActivity.class);//参数1，起始页；参数2，目标页(需确定页面已注册)
+                startActivity(intent);
+            }
+        });
+
+        //按钮事件(将代码和展示页面当成一个整体，因为它们是相互作用的)
+        button = findViewById(R.id.btn_3);
+        button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ButtonActivity.class);
                 startActivity(intent);
             }
         });
@@ -47,3 +60,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 }
+
+
+
