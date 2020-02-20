@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 /**
  * 每一个Activity对应一个页面的操作(页面中的任何动作),所以只能调用当前页面的事件id，如果调用别的页面的事件id会报空指针异常
@@ -16,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button button_2,button_3;  //声明按钮对象
     private View view;  //声明布局对象
-    private EditText edit_one;  //编辑框对象，和按钮对象一样，同样继承自textView,textView的父类为View
+    private Button edit_one;  //编辑框对象，和按钮对象一样，同样继承自textView,textView的父类为View
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,9 +61,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void setListener(){
         OnClick click = new OnClick();
+            //setOnClickListener方法需要传入OnClickListener接口的OnClick方法的实现，
             view.setOnClickListener(click);
             button_2.setOnClickListener(click);
             button_3.setOnClickListener(click);
+            edit_one.setOnClickListener(click);
     }
 
 
@@ -79,11 +80,17 @@ public class MainActivity extends AppCompatActivity {
                      intent = new Intent(MainActivity.this,RelativeLayout_1.class);
                     break;
                 case R.id.btn_2:
+                    //跳转到文本页
                     //MainActivity.this指的是MainActivity对象，textViewActivity.class使用反射机制得到textViewActivity类的所有信息，相当于new一个对象
                     intent = new Intent(MainActivity.this,textViewActivity.class);
                     break;
                 case R.id.btn_3:
+                    //跳转到按钮页
                     intent = new Intent(MainActivity.this,ButtonActivity.class);
+                    break;
+                case R.id.edit_1:
+                    //跳转到登录页
+                    intent = new Intent(MainActivity.this,EditBox.class);
                     break;
             }
             startActivity(intent);  //启动要打开的页面

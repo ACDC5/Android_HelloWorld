@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="15dp">
+
+    <EditText
+        android:id="@+id/user_edit"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:hint="用户名"
+        android:textSize="20sp"
+        android:textColor="#1A6BE6"
+        android:inputType="number"
+        android:background="@drawable/bg_user_name"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:drawableLeft="@drawable/baseline_person_black_24"
+        android:drawablePadding="5dp"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/psw_edit"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:hint="密码"
+        android:layout_below="@id/user_edit"
+        android:textSize="20sp"
+        android:textColor="#1A6BE6"
+        android:inputType="textPassword"
+        android:background="@drawable/bg_user_name"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:drawableLeft="@drawable/baseline_security_black_24"
+        android:drawablePadding="5dp"
+        android:maxLines="1"/>
+
+    <Button
+        android:id="@+id/butt_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/psw_edit"
+        android:text="登录"
+        android:background="@drawable/bg_btn4"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:layout_marginTop="27dp"/>
+
+
+
+</RelativeLayout>
