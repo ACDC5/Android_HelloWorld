@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.helloworld">
 
     <application
@@ -9,7 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".RelativeLayout_1" />
+        <activity android:name=".textViewActivity" />
+        <activity android:name=".ButtonActivity" />
+        <activity android:name=".EditBox" />
+        <activity android:name=".CheckBox" />
+        <activity android:name=".RadioButtonActivity"></activity>
         <activity android:name=".MainActivity"> <!-- #调用逻辑。这里的.MainActivity的.就是指包名==package，即第三行代码的属性值 -->
             <!-- 项目启动入口(打开后的第一个页面) -->
             <intent-filter>
@@ -19,11 +25,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".RelativeLayout_1"></activity>
-
-        <activity android:name=".textViewActivity"></activity>
-
-        <activity android:name=".ButtonActivity"></activity>
     </application>
 
 </manifest>

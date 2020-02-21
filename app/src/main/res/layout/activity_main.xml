@@ -27,8 +27,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="EditText"
-
         android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/check_butt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+        android:textAllCaps="false"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/radio_butt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RadioButton"
+        android:textSize="14sp"
+        android:textAllCaps="false" />
 
     <!--文本控件 -->
 <!--    <TextView-->

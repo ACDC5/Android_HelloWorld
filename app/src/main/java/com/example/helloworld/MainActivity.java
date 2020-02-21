@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private Button button_2,button_3;  //声明按钮对象
     private View view;  //声明布局对象
     private Button edit_one;  //编辑框对象，和按钮对象一样，同样继承自textView,textView的父类为View
+    private Button checkButt;
+    private Button radio_Butt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
         edit_one = findViewById(R.id.edit_1);
+        checkButt = findViewById(R.id.check_butt);
+        radio_Butt = findViewById(R.id.radio_butt);
+
 
         setListener();
     }
@@ -66,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
             button_2.setOnClickListener(click);
             button_3.setOnClickListener(click);
             edit_one.setOnClickListener(click);
+            checkButt.setOnClickListener(click);
+            radio_Butt.setOnClickListener(click);
     }
 
 
@@ -81,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_2:
                     //跳转到文本页
-                    //MainActivity.this指的是MainActivity对象，textViewActivity.class使用反射机制得到textViewActivity类的所有信息，相当于new一个对象
+                    //MainActivity.this指的是MainActivity对象，
+                    // textViewActivity.class使用反射机制得到textViewActivity类的所有信息，相当于new一个对象又不用导入该类.
                     intent = new Intent(MainActivity.this,textViewActivity.class);
                     break;
                 case R.id.btn_3:
@@ -91,6 +99,12 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.edit_1:
                     //跳转到登录页
                     intent = new Intent(MainActivity.this,EditBox.class);
+                    break;
+                case R.id.check_butt:
+                    intent = new Intent(MainActivity.this,CheckBox.class);
+                    break;
+                case R.id.radio_butt:
+                    intent = new Intent(MainActivity.this,RadioButtonActivity.class);
                     break;
             }
             startActivity(intent);  //启动要打开的页面

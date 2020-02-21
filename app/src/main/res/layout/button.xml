@@ -47,7 +47,7 @@
         android:textColor="#FFFFFF"
         android:layout_marginTop="5dp"
         android:textSize="20sp"
-        android:background="@drawable/bg_btn4"
+        android:background="@drawable/selector_orange"
         android:text="按钮7"/>
 
     <!--按钮点击事件 -->
