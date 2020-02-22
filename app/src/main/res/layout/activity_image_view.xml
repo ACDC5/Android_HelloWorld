@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageViewActivity">
+    <!-- 引用的图片名称不能有大写字母-->
+    <!-- 撑满控件，宽高比可能会发生改变-->
+    <ImageView
+        android:id="@+id/image_view_1"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="#FF9900"
+        android:src="@drawable/first_nasa_isinglass_rocket_launch"
+        android:scaleType="fitXY" />
+
+    <!-- 保持宽高比缩放,直至图片完全显示 -->
+    <ImageView
+        android:id="@+id/image_view_2"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="#FF9900"
+        android:src="@drawable/first_nasa_isinglass_rocket_launch"
+        android:scaleType="fitCenter"
+        android:layout_below="@id/image_view_1"/>
+
+    <!--保持宽高比缩放，直至完全覆盖控件，裁剪显示 -->
+    <ImageView
+        android:id="@+id/image_view_3"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="#FF9900"
+        android:src="@drawable/first_nasa_isinglass_rocket_launch"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/image_view_2"
+        android:layout_marginTop="10dp"/>
+
+    <!-- 加载网络图片-->
+    <ImageView
+        android:id="@+id/image_view_4"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="#FF9900"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/image_view_3"/>
+
+</RelativeLayout>
