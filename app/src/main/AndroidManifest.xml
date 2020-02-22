@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.helloworld">
 
+    <!-- 给与应用访问网络的权限-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,12 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ImageViewActivity"></activity>
         <activity android:name=".RelativeLayout_1" />
         <activity android:name=".textViewActivity" />
         <activity android:name=".ButtonActivity" />
         <activity android:name=".EditBox" />
         <activity android:name=".CheckBox" />
-        <activity android:name=".RadioButtonActivity"></activity>
+        <activity android:name=".RadioButtonActivity" />
         <activity android:name=".MainActivity"> <!-- #调用逻辑。这里的.MainActivity的.就是指包名==package，即第三行代码的属性值 -->
             <!-- 项目启动入口(打开后的第一个页面) -->
             <intent-filter>
@@ -24,7 +29,6 @@
                 <category android:name="android.intent.category.LAUNCHER" /> <!-- #指定分类 -->
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
